@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 word_list_file = File.open("./wordlist.txt")
 word_list_array = word_list_file.readlines.map(&:chomp)
+
+word_list_array.each{ |word| Word.create(word)}
