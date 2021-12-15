@@ -7,4 +7,3 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 word_list_file = File.open("./wordlist.txt")
 word_list_array = word_list_file.readlines.map(&:chomp)
-puts word_list_array[0..4]
