@@ -8,6 +8,6 @@
 word_list_file = File.open("./wordlist.txt")
 word_list_array = word_list_file.readlines.map(&:chomp)
 word_list_array.each do |new_word|
-    new_sorted_letters = new_word.split.sort.join 
-    new_word = Word.create!(original_word: new_word, sorted_word: new_sorted_letters)
+    new_sorted_letters = new_word.split("").sort!.join 
+    new_word = Word.create(original_word: new_word, sorted_word: new_sorted_letters)
 end
